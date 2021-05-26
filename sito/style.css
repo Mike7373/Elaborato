@@ -11,15 +11,17 @@ div#container{
 div#content{
     margin-top: 10%;
     margin-bottom: 5%;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 25%;
+    margin-right: 25%;
     background-color: rgb(157, 212, 212);
-    width: 40%;
+    width: 50%;
     height: 80%;
 }
 
 ul#menu{
     list-style-type: none;
+    margin-left: 0%;
+    display: inline;
 }
 
 li.menu{
@@ -29,5 +31,5 @@ li.menu{
 a.menu{
     display: block;
     padding: 8px;
-    background-color: #dddddd;
+    background-color: rgb(88, 163, 163);
 }
