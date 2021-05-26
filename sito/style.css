@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    background-color: rgb(203, 224, 224);
+}
+
+div#container{
+    height: 100%;
+    width:100%;
+}
+
+div#content{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: rgb(157, 212, 212);
+    width: 40%;
+    height: 80%;
+}
+
+ul#menu{
+    list-style-type: none;
+}
+
+li.menu{
+    float: left;
+}
+  
+a.menu{
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+}

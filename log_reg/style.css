@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+}
+
+div#container{
+    background-color: rgb(203, 224, 224);
+    height: 100%;
+    width:100%;
+    padding-top: 150px;
+}
+
+/*AREA CONTENTENTE IL FORM*/
+
+form#log_form{
+    background-color: rgb(157, 212, 212);
+    height: 600px;
+    max-width: 30%;
+    margin: auto;
+    border-radius: 30px;
+}
+
+form#reg_form{
+    background-color: rgb(157, 212, 212);
+    height: 700px;
+    max-width: 30%;
+    margin: auto;
+    border-radius: 30px;
+}
+
+/* FORM */
+
+div#field_box{
+    padding: 10%;
+    text-align: center;     
+}
+
+input.field{
+    display: block;
+    margin: auto;
+    margin-bottom: 10%;
+    border: 0px;
+    border-radius: 25px;
+    width: 70%;
+    height: 60px;
+    text-align: center;
+    font-size: 100%;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+input#send_button{
+    display: block;
+    margin: auto;
+    text-align: center;
+    border: 0px;
+    border-radius: 25px;
+    width: 70%;
+    height: 60px;
+    background-color: rgb(88, 163, 163);
+    text-align: center;
+    font-size: 30px;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+input#send_button:hover{
+    opacity: 0.85;
+}
+
+div#title{
+    font-weight: bold;
+    margin-bottom: 10%;
+    font-size: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+a#switch{
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+/* CAMPI VUOTI POST INVIO */
+
+.error::-webkit-input-placeholder{
+    color:red;
+    font-weight: bold;
+}
+
+/* UTENTE O PSW ERRATI*/
+
+div.notExist{
+    display: block;
+    margin: auto;
+    margin-bottom: 10%;
+    padding-top: 10px;
+    border: 3px solid red;
+    border-collapse: collapse;
+    border-radius: 25px;
+    width: 70%;
+    height: 30px;
+    text-align: center;
+    font-size: 100%;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    color:red;
+    font-weight: bold;
+    background-color: rgb(255, 193, 193);
+}
+
+div.registered{
+    display: block;
+    margin: auto;
+    margin-bottom: 10%;
+    padding-top: 10px;
+    border: 3px solid green;
+    border-collapse: collapse;
+    border-radius: 25px;
+    width: 70%;
+    height: 30px;
+    text-align: center;
+    font-size: 100%;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    color:green;
+    font-weight: bold;
+    background-color: rgb(182, 255, 182);
+}
+
+.invisible{
+    display: none;
+}
