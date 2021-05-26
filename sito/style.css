@@ -10,12 +10,11 @@ div#container{
 
 div#content{
     margin-top: 10%;
-    margin-bottom: 5%;
     margin-left: 25%;
     margin-right: 25%;
     background-color: rgb(157, 212, 212);
     width: 50%;
-    height: 80%;
+    height: 100%;
 }
 
 ul#menu{
@@ -30,6 +29,15 @@ li.menu{
   
 a.menu{
     display: block;
-    padding: 8px;
+    padding: 25px;
     background-color: rgb(88, 163, 163); 
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(203, 224, 224);
+    text-decoration: none;
+}
+
+div#nav{
+    background-color: rgb(88, 163, 163); 
+    height: 84px;
 }
