@@ -16,7 +16,7 @@ div#content{
     width: 50%;
     height: 100%;
 }
-
+/* MENU */
 ul#menu{
     list-style-type: none;
     margin-left: 0%;
@@ -53,6 +53,8 @@ div#nav{
     background-color: rgb(88, 163, 163); 
     height: 84px;
 }
+
+/* POST E BOTTONE DEI LIKE*/
 
 div#post{
     background-color: rgb(203, 224, 224);

@@ -1,14 +1,12 @@
 <?php 
 
+require("../credenzialiDB.php");
+// ^^^ Connessione al db ^^^
+
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$hostDB = "localhost";
-$userDB = "root";
-$pswDB = "";
-$nameDB = "elaborato";
-$conn = mysqli_connect($hostDB, $userDB, $pswDB, $nameDB) or die("Impossibile connettersi al database");
-
+//Se viene passato come paramentr l'email significa che è avvenuta una reg, altrimenti un login, quindi vengono gestiti in modo diverso
 if(!isset($_POST['email'])){
     $query = "SELECT * FROM utente WHERE username = '$username' && psw = '$password'";
     $result = mysqli_query($conn, $query);   
@@ -17,16 +15,24 @@ if(!isset($_POST['email'])){
         header("Location: login.php?errore");
         mysqli_close($conn);
     }else{
+        /*
+        Se l'utente ha inserito correttamente le credenziali verrà spedito alla home
+        e ricunosciuto tramite il suo id univoco, non tramite username, così da evitare problemi di sicurezza.
+        */
         ?>
-
         <form id="send" action="../sito/home.php" method="POST">
             <?php 
-                foreach($_POST as $name => $value){
-                    echo '<input type="hidden" name="'.htmlentities($name).'" value="'.htmlentities($value).'">';
+                $query = "SELECT * FROM utente WHERE username = '$username' && psw = '$password'";
+                $id = mysqli_query($conn, $query);
+                while($row = mysqli_fetch_assoc($id)) {
+                    echo '<input type="hidden" name="id" value="'.$row['id'].'">';
                 }
+                echo '<input type="hidden" name="username" value="'.$username.'">';
+                echo '<input type="hidden" name="password" value="'.$password.'">';
             ?>
         </form>
         <script type="text/javascript">
+            location.reload();
             document.getElementById("send").submit();
         </script>
 
