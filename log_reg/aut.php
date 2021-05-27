@@ -15,9 +15,23 @@ if(!isset($_POST['email'])){
 
     if(mysqli_num_rows($result) == 0){
         header("Location: login.php?errore");
-
+        mysqli_close($conn);
     }else{
-        header("Location: ../sito/home.php");
+        ?>
+
+        <form id="send" action="../sito/home.php" method="POST">
+            <?php 
+                foreach($_POST as $name => $value){
+                    echo '<input type="hidden" name="'.htmlentities($name).'" value="'.htmlentities($value).'">';
+                }
+            ?>
+        </form>
+        <script type="text/javascript">
+            document.getElementById("send").submit();
+        </script>
+
+        <?
+        mysqli_close($conn);
     }
 }else{
     $email = $_POST['email'];
@@ -26,13 +40,12 @@ if(!isset($_POST['email'])){
 
     if(mysqli_num_rows($result) != 0 ){
         header("Location: registrazione.php?errore");
+        mysqli_close($conn);
     }else{
         $query = "INSERT INTO utente(username, psw, email) VALUES('$username','$password', '$email')";
         $result = mysqli_query($conn, $query);
         header("Location: login.php?registered");
+        mysqli_close($conn);
     }
 }
-
-
-
 ?>
