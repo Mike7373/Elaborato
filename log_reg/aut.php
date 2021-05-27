@@ -30,7 +30,7 @@ if(!isset($_POST['email'])){
             document.getElementById("send").submit();
         </script>
 
-        <?
+        <?php
         mysqli_close($conn);
     }
 }else{
