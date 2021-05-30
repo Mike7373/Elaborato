@@ -74,7 +74,7 @@
                         </b>
                         
                     </div>
-                    <!--BOTTONE DEI LIKE-->
+                    <!--BOTTONE DEI LIKE CHE NON FUNZIONA, CI SAREBBE DA IMPLEMENTARE UNA PARTE IN JQUERY-->
                     <input type="button" value="LIKE: <?php 
                     $query = "SELECT COUNT(*) AS total FROM likepost WHERE id_post = '1'";
                     $result = mysqli_query($conn, $query);
